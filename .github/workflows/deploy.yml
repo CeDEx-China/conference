@@ -1,0 +1,57 @@
+# GitHub Actions: Deploy to GitHub Pages
+#
+# Triggers on every push to `main`.
+# Publishes the repo root as a static site to GitHub Pages.
+#
+# Prerequisites (one-time, in the repo Settings):
+#   Settings → Pages → Source → "GitHub Actions"
+#   Settings → Environments → "github-pages" (created automatically)
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+# Grant the GITHUB_TOKEN minimal permissions needed for Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only allow one deployment at a time; cancel any in-progress run
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build static site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Suppress Jekyll processing — the site is plain HTML/CSS/JS
+      - name: Disable Jekyll
+        run: touch .nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload the entire repo root as the Pages artifact
+          path: .
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
