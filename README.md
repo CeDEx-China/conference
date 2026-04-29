@@ -1,6 +1,6 @@
 # CeDEx China Annual Conference 2026
 
-Conference website for the CeDEx China Annual Conference, hosted as a GitHub Pages site under the `cedex-china` GitHub organisation.
+Conference website for the CeDEx China Annual Conference, co-hosted by CHE and CeDEx China, and hosted as a GitHub Pages site under the `cedex-china` GitHub organisation.
 
 **Live site:** https://cedex-china.github.io/conference/
 

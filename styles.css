@@ -498,20 +498,44 @@ ul li::before {
     margin-bottom: 1.4rem;
 }
 
-h1 {
+/* Emphasise the co-host line as the main hero title, de-emphasise the annual name */
+#hero h1 {
     font-size: clamp(1.8rem, 4.5vw, 3rem);
     font-weight: 700;
     color: var(--color-white);
-    line-height: 1.2;
-    margin-bottom: 1rem;
+    line-height: 1.1;
+    margin-bottom: .5rem;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 .hero-subtitle {
     font-size: clamp(1.05rem, 2vw, 1.4rem);
-    color: rgba(255,255,255,.75);
-    font-weight: 400;
+    color: rgba(255,255,255,.85);
+    font-weight: 500;
     margin-bottom: 1rem;
-    line-height: 1.5;
+    line-height: 1.4;
+}
+
+/* Conference title inside hero (long descriptive title) */
+.hero-title {
+    display: block;
+    font-size: clamp(1.2rem, 2.8vw, 2rem);
+    font-weight: 700;
+    color: var(--color-white);
+    text-align: center;
+    line-height: 1.15;
+    margin: .25rem auto .9rem;
+    max-width: 900px;
+    text-shadow: 0 8px 22px rgba(0,0,0,.28);
+    letter-spacing: -0.01em;
+}
+
+.hero-badge {
+    font-size: .72rem;
+    padding: .28rem .9rem;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.08);
 }
 
 .hero-date {
