@@ -77,13 +77,14 @@ ul { list-style: none; }
     left: 0;
     right: 0;
     height: var(--topbar-h);
-    background: var(--color-navy);
+    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1.25rem;
     z-index: 900;
-    box-shadow: 0 2px 12px rgba(0,0,0,.35);
+    box-shadow: 0 2px 12px rgba(0,0,0,.12);
+    border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
 .unnc-topbar-left {
@@ -116,7 +117,7 @@ ul { list-style: none; }
 .unnc-topbar-separator {
     width: 1px;
     height: 28px;
-    background: rgba(255,255,255,.25);
+    background: rgba(0,0,0,.15);
 }
 
 .unnc-topbar-right {
@@ -126,7 +127,7 @@ ul { list-style: none; }
 }
 
 .unnc-topbar-link {
-    color: rgba(255,255,255,.82);
+    color: var(--color-navy);
     font-size: .8rem;
     font-weight: 500;
     letter-spacing: .02em;
@@ -143,8 +144,8 @@ ul { list-style: none; }
     gap: .3rem;
 }
 .unnc-topbar-link:hover {
-    color: var(--color-white);
-    background: rgba(255,255,255,.12);
+    color: var(--color-navy);
+    background: rgba(0,33,71,.08);
     text-decoration: none;
 }
 
@@ -276,11 +277,12 @@ ul { list-style: none; }
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(255,255,255,.35);
-    border: 2px solid rgba(255,255,255,.5);
+    background: rgba(255,255,255,.55);
+    border: 2px solid rgba(255,255,255,.8);
     display: block;
-    transition: background var(--trans-fast), transform var(--trans-fast), border-color var(--trans-fast);
+    transition: background var(--trans-fast), transform var(--trans-fast), border-color var(--trans-fast), box-shadow var(--trans-fast);
     position: relative;
+    box-shadow: 0 0 0 1.5px rgba(0,0,0,.3), 0 1px 4px rgba(0,0,0,.2);
 }
 .nav-dot::after {
     content: attr(title);
@@ -556,28 +558,33 @@ ul li::before {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 3.5rem;
+    margin-bottom: 0;
 }
 
 .scroll-indicator {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255,255,255,.1);
-    border: 1px solid rgba(255,255,255,.25);
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,.12);
+    border: 1.5px solid rgba(255,255,255,.3);
     border-radius: 50%;
     cursor: pointer;
-    margin: 0 auto;
-    color: rgba(255,255,255,.7);
-    transition: background var(--trans-fast), transform var(--trans-fast);
+    color: rgba(255,255,255,.75);
+    transition: background var(--trans-fast), color var(--trans-fast);
     animation: bounce 2.2s ease-in-out infinite;
+    z-index: 10;
 }
 .scroll-indicator:hover {
-    background: rgba(255,255,255,.2);
-    transform: translateY(2px);
+    background: rgba(255,255,255,.22);
+    color: var(--color-white);
     animation: none;
+    transform: translateX(-50%) translateY(2px);
 }
 
 @keyframes bounce {
