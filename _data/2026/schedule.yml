@@ -1,0 +1,71 @@
+- day: "Day 1 — June 24"
+  items:
+    - time: "09:00 – 09:15"
+      event: "Welcome &amp; Opening"
+      type: ""
+    - time: "09:15 – 10:00"
+      event: "Plenary 1: Andrea Isoni"
+      type: keynote
+    - time: "10:00 – 10:10"
+      event: "Morning Break"
+      type: break
+    - time: "10:10 – 11:25"
+      event: "Session 1: Tom Lane, Mengxing Wei, Jaesun Lee"
+      type: ""
+    - time: "11:30 – 12:15"
+      event: "Plenary 2: Jaimie W. Lien"
+      type: keynote
+    - time: "12:15 – 13:50"
+      event: "Lunch Break"
+      type: break
+    - time: "13:50 – 14:35"
+      event: "Plenary 3: Ming Gao"
+      type: keynote
+    - time: "14:35 – 15:50"
+      event: "Session 2: Flora Li, Jingliang Liu, Feng Zhu"
+      type: ""
+    - time: "15:50 – 16:00"
+      event: "Afternoon Break"
+      type: break
+    - time: "16:00 – 17:40"
+      event: "Session 3: Jie Zheng, Haihan Yu, Yizhi Wang, Zhixian Yu"
+      type: ""
+    - time: "18:00 – 18:45"
+      event: "Plenary 4: Abigail Barr"
+      type: keynote
+    - time: "19:15"
+      event: "Dinner"
+      type: social
+
+- day: "Day 2 — June 25"
+  items:
+    - time: "09:00 – 10:00"
+      event: "Keynote: Speaker TBA"
+      type: keynote
+    - time: "10:00 – 10:30"
+      event: "Coffee Break"
+      type: break
+    - time: "10:30 – 12:00"
+      event: "Parallel Sessions C"
+      type: ""
+    - time: "12:00 – 13:30"
+      event: "Lunch"
+      type: break
+    - time: "13:30 – 15:00"
+      event: "Panel Discussion"
+      type: ""
+    - time: "15:00 – 15:30"
+      event: "Tea Break"
+      type: break
+    - time: "15:30 – 17:00"
+      event: "Keynote: Speaker TBA"
+      type: keynote
+    - time: "17:00 – 17:30"
+      event: "Closing Remarks &amp; Awards"
+      type: ""
+    - time: "17:30 – 19:00"
+      event: "Free Time / Networking"
+      type: ""
+    - time: "19:00 – 22:00"
+      event: "Conference Dinner"
+      type: social

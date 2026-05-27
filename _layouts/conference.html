@@ -1,0 +1,50 @@
+---
+# Jekyll layout: conference shell (shared across all years)
+# Years provide their own _includes/ (topbar, bottom-nav, mobile-drawer, footer)
+# via {% include_relative %} relative to the year's index.html source.
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="theme-color" content="#002147">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+    {% seo %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/css/shared/topbar-bottombar.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ page.year | append: '/css/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/shared/mobile.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ page.year | append: '/css/mobile.css' | relative_url }}">
+</head>
+<body>
+    {% include topbar.html %}
+    {% include mobile-drawer.html %}
+    {% include bottom-nav.html %}
+
+    <!-- Mobile section progress dots (replaces bottom nav on mobile) -->
+    {% assign year_str = page.year | append: "" %}
+    <div class="mobile-section-progress" id="mobile-section-progress" aria-hidden="true">
+        {% for item in site.data[year_str].navigation %}
+        <button class="mobile-section-dot{% if forloop.first %} active{% endif %}" data-section="{{ forloop.index0 }}" aria-label="{{ item.label }}"></button>
+        {% endfor %}
+    </div>
+
+    <div class="brand-logo" aria-hidden="true">
+        <span class="brand-conf">CeDEx China</span>
+        <span class="brand-year">{{ page.year }}</span>
+    </div>
+
+    <div class="fullpage-container">
+        {{ content }}
+    </div>
+
+    <script src="{{ '/js/fullpage.js' | relative_url }}"></script>
+</body>
+</html>

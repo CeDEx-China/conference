@@ -1,0 +1,29 @@
+- name: Professor Abigail Barr
+  title: "Professor, School of Economics, University of Nottingham"
+  bio: 'Research focuses on "decision-makers embedded in society," conducting lab and field experiments across multiple countries. Published in PNAS, Journal of Public Economics, JEEA.'
+  photo: abigail-barr.jpg
+
+- name: Professor Andrea Isoni
+  title: "Professor of Behavioural Science & Head of Behavioural Science Group, Warwick Business School"
+  bio: Focuses on individual decision-making under controlled experimental conditions, including reference-dependent preferences, risk/uncertainty decisions, and nudging. Published in JPE, AER, GEB.
+  photo: andrea-isoni.png
+
+- name: Professor Jaimie W. Lien
+  title: "University Distinguished Professor & Co-Director of CREATE, Shandong University"
+  bio: Research in behavioral economics, experimental economics, and applied microeconomics. Published in Nature Communications, PNAS, Economic Journal, GEB, Experimental Economics.
+  photo: jaimie-lien.png
+
+- name: Professor Jie Zheng
+  title: "University Distinguished Professor & Director of CREATE, Shandong University"
+  bio: First JEBO Associate Editor from mainland China. Research in information economics, experimental economics, behavioral economics, and industrial organization. Published in Nature Communications, GEB, Management Science.
+  photo: jie-zheng.png
+
+- name: Professor Ming Gao
+  title: "Professor, China Economic Research Institute & Associate Dean, Sunwah International Business School, Liaoning University"
+  bio: Research in digital economy, platform economics, applied industrial organization, two-sided markets, and antitrust/competition policy. Published in IER, JEMS, Economic Theory.
+  photo: ming-gao.png
+
+- name: Dr Tom Lane
+  title: "Associate Professor, Researcher, Newcastle University & Senior Fellow of CeDEx China"
+  bio: Experimental research on discrimination and social behavior published in AER, EER, GEB, Journal of Public Economics. Covered by BBC Radio 4, The Independent, The Conversation.
+  photo: tom-lane.jpg

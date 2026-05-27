@@ -1,0 +1,15 @@
+<!-- Mobile nav drawer — 2026 -->
+<div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <nav>
+        {% for item in site.data.2026.navigation %}
+        <a href="{{ item.url }}" class="mobile-drawer-link">{{ item.label }}</a>
+        {% endfor %}
+    </nav>
+    <div class="mobile-drawer-sep"></div>
+    <nav>
+        <a href="https://www.nottingham.edu.cn/en/humanities-and-social-sciences/schools-and-department/economics/home.aspx" target="_blank" rel="noopener" class="mobile-drawer-link mobile-drawer-ext">Economics School ↗</a>
+        <a href="https://www.nottingham.edu.cn/en/humanities-and-social-sciences/schools-and-department/economics/research/research-centres/cedex-china/home.aspx" target="_blank" rel="noopener" class="mobile-drawer-link mobile-drawer-ext">CeDEx China ↗</a>
+        <a href="mailto:CedexChina@nottingham.edu.cn" class="mobile-drawer-link">Contact</a>
+    </nav>
+</div>
+<div class="mobile-overlay" id="mobile-overlay"></div>

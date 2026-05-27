@@ -1,0 +1,30 @@
+<!-- UNNC Institutional Top Bar — 2026 -->
+<header class="unnc-topbar">
+    <div class="unnc-topbar-left">
+        <a href="#hero" class="topbar-logo-link">
+            <img src="{{ '/favicon.ico' | relative_url }}" alt="University of Nottingham Ningbo China" class="unnc-topbar-logo">
+        </a>
+        <div class="unnc-topbar-separator"></div>
+        <a href="#hero" class="topbar-logo-link">
+            <img src="https://www.nottingham.edu.cn/en/Humanities-and-Social-Sciences/images/Economics/Research/cedex337x169.png" alt="CeDEx China" class="cedex-topbar-logo">
+        </a>
+    </div>
+    <div class="unnc-topbar-right">
+        <div class="unnc-topbar-editions">
+            <button class="unnc-topbar-link editions-toggle" id="editions-toggle" aria-haspopup="true" aria-expanded="false">
+                Editions <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="editions-dropdown" role="menu">
+                {% for edition in site.data.editions %}
+                <a href="{{ edition.url | relative_url }}" class="editions-item" role="menuitem">{{ edition.year }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <a href="https://www.nottingham.edu.cn/en/humanities-and-social-sciences/schools-and-department/economics/home.aspx" target="_blank" rel="noopener" class="unnc-topbar-link">Economics School</a>
+        <a href="https://www.nottingham.edu.cn/en/humanities-and-social-sciences/schools-and-department/economics/research/research-centres/cedex-china/home.aspx" target="_blank" rel="noopener" class="unnc-topbar-link">CeDEx China</a>
+        <a href="mailto:CedexChina@nottingham.edu.cn" class="unnc-topbar-link">Contact</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+    </button>
+</header>

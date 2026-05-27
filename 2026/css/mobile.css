@@ -1,0 +1,164 @@
+/* =============================================================
+   2026 Conference — Mobile & Responsive overrides
+   Loaded after 2026/css/styles.css
+   ============================================================= */
+
+/* ═══════════════════════════════════════
+   TOUCH: SUPPRESS CARD HOVER EFFECTS
+═══════════════════════════════════════ */
+@media (hover: none) {
+    .date-card:hover,
+    .speaker-card:hover,
+    .registration-card:hover,
+    .submission-box:hover {
+        transform: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+        border-color: rgba(0, 0, 0, .06);
+    }
+    .speaker-card:hover .speaker-photo img { transform: none; }
+    .btn-primary:hover  { box-shadow: none; }
+    .btn:active         { transform: scale(.95); } /* keep active feedback */
+    .schedule-item:hover          { background: transparent; }
+    .schedule-item--keynote:hover { background: rgba(0, 123, 135, .08); }
+    .schedule-item--social:hover  { background: rgba(200, 169, 81, .1); }
+}
+
+/* ═══════════════════════════════════════
+   LARGE TABLET (≤1024px)
+═══════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .speakers-grid--5col { grid-template-columns: repeat(3, 1fr); max-width: 800px; }
+    .dates-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ═══════════════════════════════════════
+   TABLET (≤900px)
+═══════════════════════════════════════ */
+@media (max-width: 900px) {
+    /* Layout */
+    .content-grid          { grid-template-columns: 1fr; }
+    .schedule-container    { grid-template-columns: 1fr; }
+    .participation-split   { grid-template-columns: 1fr; gap: 2rem; }
+    .speakers-grid--3col   { grid-template-columns: repeat(2, 1fr); max-width: 500px; }
+
+    /* Date cards */
+    .date-card { padding: 1.2rem 1rem; }
+
+    /* Schedule: time floats above the event text */
+    .schedule-item { flex-wrap: wrap; gap: .1rem; padding: .65rem .75rem; }
+    .schedule-item .time {
+        width: 100%; font-size: .72rem;
+        color: var(--color-teal); letter-spacing: .03em;
+    }
+
+    /* Hero */
+    .hero-date     { margin-bottom: 2rem; }
+    .section-content { padding: 2rem 1.25rem; }
+
+    /* Participation */
+    .container--participation { padding: 1.5rem 1.25rem; }
+
+    /* Speakers */
+    .speaker-photo { width: 88px; height: 88px; }
+}
+
+/* ═══════════════════════════════════════
+   MOBILE (≤600px)
+═══════════════════════════════════════ */
+@media (max-width: 600px) {
+    .speakers-grid--5col { grid-template-columns: repeat(2, 1fr); }
+
+    /* Cards: tighten padding */
+    .registration-card { padding: 1.75rem 1.5rem; }
+    .submission-box    { padding: 1.75rem 1.5rem; }
+
+    /* Participation */
+    .participation-header { margin-bottom: 1.5rem; }
+}
+
+/* ═══════════════════════════════════════
+   SMALL PHONE (≤480px)
+═══════════════════════════════════════ */
+@media (max-width: 480px) {
+    /* Typography */
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.35rem; }
+
+    /* Container */
+    .container              { padding: var(--section-pad-v) 1rem; }
+    .container--participation { padding: 1.25rem 1rem; }
+
+    /* Hero */
+    .section-content { padding: 1.5rem 1rem; }
+    .hero-badge  { font-size: .68rem; letter-spacing: .08em; }
+    .hero-title  { font-size: clamp(1.1rem, 5vw, 1.6rem); }
+    .hero-cta    { flex-direction: column; align-items: stretch; }
+    .btn         { text-align: center; }
+    .scroll-indicator { display: none; } /* reclaim space on small screens */
+
+    /* Dates: 2-column */
+    .dates-grid  { grid-template-columns: 1fr 1fr; }
+    .date-card   { padding: 1rem .875rem; }
+    .date-icon svg { width: 22px; height: 22px; }
+
+    /* Speakers: horizontal card with CSS grid (photo | h3 + title stacked) */
+    .speakers-grid           { grid-template-columns: 1fr; }
+    .speakers-grid--3col,
+    .speakers-grid--5col     { max-width: 100%; grid-template-columns: 1fr; }
+    .speaker-card {
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        grid-template-rows: auto auto;
+        column-gap: .875rem;
+        row-gap: .15rem;
+        text-align: left;
+        padding: .875rem;
+        align-items: start;
+    }
+    .speaker-photo  {
+        grid-column: 1; grid-row: 1 / 3;
+        width: 64px; height: 64px; margin-bottom: 0; align-self: center;
+    }
+    .speaker-card h3    { grid-column: 2; grid-row: 1; margin: 0; font-size: .9rem; align-self: end; }
+    .speaker-card .speaker-title { grid-column: 2; grid-row: 2; margin: 0; align-self: start; }
+    .speaker-bio    { display: none; } /* too dense at this width */
+
+    /* Schedule */
+    .schedule-item { padding: .5rem .6rem; }
+
+    /* Registration */
+    .registration-grid { grid-template-columns: 1fr; }
+    .registration-card { padding: 1.5rem 1.25rem; }
+    .submission-box    { padding: 1.5rem 1.25rem; }
+
+    /* Participation */
+    .participation-h3  { font-size: 1.2rem; }
+    .participation-header { margin-bottom: 1.25rem; }
+
+    /* Full-width CTA buttons */
+    .participation-col .btn,
+    .registration-stack .btn,
+    .submission-cta-box .btn { display: block; text-align: center; }
+}
+
+/* ═══════════════════════════════════════
+   VERY SMALL PHONE (≤360px)
+═══════════════════════════════════════ */
+@media (max-width: 360px) {
+    .dates-grid { grid-template-columns: 1fr; }
+    .hero-badge { display: none; }
+    .hero-date  { flex-direction: column; gap: .2rem; }
+    .hero-date-sep { display: none; }
+}
+
+/* ═══════════════════════════════════════
+   VENUE RESPONSIVE
+═══════════════════════════════════════ */
+@media (max-width: 900px) {
+    .venue-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+    .venue-card { padding: 1.25rem 1rem; }
+    .contact-action { padding: .65rem .875rem; }
+    .transport-item { font-size: .87rem; }
+}

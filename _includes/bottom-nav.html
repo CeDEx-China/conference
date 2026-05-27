@@ -1,0 +1,7 @@
+<!-- Bottom Navigation Bar -->
+{% assign year_str = page.year | append: "" %}
+<nav class="side-nav" aria-label="Section navigation">
+    {% for item in site.data[year_str].navigation %}
+    <a href="{{ item.url }}" class="nav-dot{% if forloop.first %} active{% endif %}" data-section="{{ forloop.index0 }}">{{ item.label }}</a>
+    {% endfor %}
+</nav>

@@ -1,0 +1,32 @@
+title: CeDEx China Annual Conference
+description: Behaviour, Experiments, and Health — CeDEx China & CHE Joint Conference
+url: "https://cedex-china.github.io"
+baseurl: "/conference"
+
+# Social Metadata
+twitter:
+  username: CeDEx_China
+  card: summary_large_image
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "conference"
+
+# Exclusion
+exclude:
+  - .devcontainer/
+  - .github/
+  - .ruby-lsp/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .jekyll-cache/
+

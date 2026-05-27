@@ -1,0 +1,128 @@
+/* =============================================================
+   Shared Chrome — Mobile & Responsive overrides
+   Loaded after /css/shared/topbar-bottombar.css
+   ============================================================= */
+
+/* ═══════════════════════════════════════
+   MOBILE SECTION PROGRESS DOTS
+   Replaces bottom nav on mobile (≤900px)
+═══════════════════════════════════════ */
+.mobile-section-progress {
+    display: none;
+    position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+    gap: 7px; z-index: 820; align-items: center;
+    padding: 7px 12px; border-radius: 100px;
+    background: rgba(0, 33, 71, .6);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+.mobile-section-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: rgba(255, 255, 255, .3);
+    border: none; padding: 0; cursor: pointer; flex-shrink: 0;
+    transition: background var(--trans-fast), transform var(--trans-fast);
+    /* Enlarge tap target without affecting layout */
+    position: relative;
+}
+.mobile-section-dot::before {
+    content: ''; position: absolute;
+    inset: -8px; border-radius: 50%;
+}
+.mobile-section-dot.active {
+    background: var(--color-teal);
+    transform: scale(1.35);
+}
+
+/* ═══════════════════════════════════════
+   TABLET (≤900px)
+═══════════════════════════════════════ */
+@media (max-width: 900px) {
+    .unnc-topbar-right { display: none; }
+    .mobile-menu-btn   { display: flex; }
+    .side-nav          { display: none; }
+    .brand-logo        { display: none; }
+    :root { --section-pad-v: 2.5rem; }
+
+    /* Show progress dots instead of bottom nav */
+    .mobile-section-progress { display: flex; }
+
+    /* Remove bottom-nav gap — reclaim the space */
+    .fullpage-container { bottom: 0; }
+
+    /* Compact topbar */
+    .unnc-topbar { padding: 0 1rem; }
+
+    /* Snappier section transitions on touch */
+    .fullpage-section {
+        transition: opacity .38s cubic-bezier(.4, 0, .2, 1),
+                    transform .38s cubic-bezier(.4, 0, .2, 1);
+    }
+}
+
+/* ═══════════════════════════════════════
+   SMALL PHONE (≤480px)
+═══════════════════════════════════════ */
+@media (max-width: 480px) {
+    :root { --section-pad-v: 1.75rem; }
+
+    /* Compact topbar logos */
+    .unnc-topbar { padding: 0 .875rem; }
+    .unnc-topbar-logo   { height: 28px; }
+    .cedex-topbar-logo  { height: 30px; }
+    .unnc-topbar-separator { height: 22px; }
+
+    /* Full-width drawer on tiny screens */
+    .mobile-drawer { width: 100vw; }
+    .mobile-drawer-link { font-size: 1rem; padding: 1rem 1.5rem; }
+}
+
+/* ═══════════════════════════════════════
+   SAFE AREA INSETS (notched phones)
+═══════════════════════════════════════ */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    @media (max-width: 900px) {
+        .fullpage-section {
+            padding-bottom: calc(2.5rem + env(safe-area-inset-bottom));
+        }
+        .mobile-section-progress {
+            bottom: calc(18px + env(safe-area-inset-bottom));
+        }
+    }
+}
+
+/* ═══════════════════════════════════════
+   TOUCH: SUPPRESS CHROME HOVER EFFECTS
+═══════════════════════════════════════ */
+@media (hover: none) {
+    .nav-dot:hover        { background: transparent; color: rgba(255, 255, 255, .55); }
+    .unnc-topbar-link:hover { background: transparent; }
+    .editions-item:hover  { background: transparent; }
+    .mobile-drawer-link:hover {
+        background: transparent; border-color: transparent; color: rgba(255, 255, 255, .85);
+    }
+}
+
+/* ═══════════════════════════════════════
+   REDUCED MOTION
+═══════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+    .scroll-indicator { animation: none; }
+    .mobile-section-dot { transition: none; }
+}
+
+/* ═══════════════════════════════════════
+   PRINT
+═══════════════════════════════════════ */
+@media print {
+    body { overflow: visible !important; }
+    .unnc-topbar, .side-nav, .brand-logo, .mobile-menu-btn,
+    .mobile-drawer, .mobile-overlay, .scroll-indicator,
+    .mobile-section-progress { display: none !important; }
+    .fullpage-container { position: static !important; bottom: auto !important; }
+    .fullpage-section {
+        position: static !important; opacity: 1 !important;
+        transform: none !important; pointer-events: auto !important;
+        page-break-inside: avoid;
+    }
+}
