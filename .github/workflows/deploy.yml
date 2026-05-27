@@ -34,15 +34,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Suppress Jekyll processing — the site is plain HTML/CSS/JS
-      - name: Disable Jekyll
-        run: touch .nojekyll
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload the entire repo root as the Pages artifact
-          path: .
+          # Upload Jekyll build output
+          path: ./_site
 
   deploy:
     name: Deploy to GitHub Pages

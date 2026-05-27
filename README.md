@@ -1,45 +1,37 @@
-# CeDEx China Annual Conference 2026
+# CeDEx China Conference Site
 
-Conference website for the CeDEx China Annual Conference, co-hosted by CHE and CeDEx China, and hosted as a GitHub Pages site under the `cedex-china` GitHub organisation.
+Official conference website for CeDEx China (GitHub Pages).
 
-**Live site:** https://cedex-china.github.io/conference/
+Live site: https://cedex-china.github.io/conference/
 
-## Structure
+## Local Preview
 
-```
-conference/
-├── index.html          # Single-page conference site
-├── styles.css          # All styles (UNNC brand palette)
-└── .github/
-    └── workflows/
-        └── deploy.yml  # GitHub Actions → GitHub Pages
-```
-
-## Local preview
-
-Open `index.html` directly in a browser, or serve with any static server:
+Use Jekyll (required for Liquid templates and `_data` rendering):
 
 ```sh
-npx serve .
-# or
-python -m http.server 8080
+bundle install
+bundle exec jekyll serve --livereload
 ```
+
+Open: http://127.0.0.1:4000/conference/
 
 ## Deployment
 
-Push to the `main` branch. The GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically publishes the site to GitHub Pages from the repo root.
+Push to `main` to trigger GitHub Actions deployment.
 
-Make sure **GitHub Pages** is enabled for this repository in  
-*Settings → Pages → Source: GitHub Actions*.
+Required repo setting:
+Settings → Pages → Source: GitHub Actions
 
-## Updating content
+Workflow file:
+`.github/workflows/deploy.yml`
 
-| What to change | Where |
-|---|---|
-| Conference dates / prices | `index.html` — respective sections |
-| Speaker details (name, photo, bio) | `index.html` — `#speakers` section |
-| Brand colours / typography | `styles.css` — `:root` custom properties |
-| Past editions links | `index.html` — `.editions-dropdown` |
+## Common Content Updates
+
+- 2026 page content: `2026/index.html`
+- Speaker/schedule/navigation data: `_data/2026/*.yml`
+- Shared layout: `_layouts/conference.html`
+- Shared styles: `css/shared/*`
+- 2026 styles: `2026/css/*`
 
 ## Contact
 
