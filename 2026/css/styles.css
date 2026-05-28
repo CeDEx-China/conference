@@ -299,7 +299,7 @@ ul li::before { content: ''; position: absolute; left: 0; top: .65em; width: 6px
 .text-center { text-align: center; }
 
 /* ═══ PARTICIPATION (MERGED) ═══ */
-.container--participation { max-width: 1400px; margin: 0 auto; padding: 1.5rem 2rem; }
+.container--participation { max-width: var(--container-max); margin: 0 auto; padding: 1.5rem 2rem; }
 .participation-header { margin-bottom: 2.5rem; }
 .participation-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
 .participation-h3 { font-size: 1.4rem; font-weight: 700; color: var(--color-navy); margin-bottom: 1.5rem; position: relative; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-teal); display: inline-block; }

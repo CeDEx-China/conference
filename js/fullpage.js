@@ -208,32 +208,4 @@ document.addEventListener('fpGoTo', function(e) {
     });
 })();
 
-/* Mobile maps deep link with fallback */
-(function () {
-    'use strict';
 
-    var mobileMapLink = document.getElementById('mobile-map-link');
-    if (!mobileMapLink) return;
-
-    mobileMapLink.addEventListener('click', function (e) {
-        var ua = navigator.userAgent || '';
-        var isIOS = /iPhone|iPad|iPod/i.test(ua);
-        var isAndroid = /Android/i.test(ua);
-
-        var fallbackUrl = 'https://maps.google.com/?q=29.8007,121.5577';
-        var iosNativeUrl = 'maps://?ll=29.8007,121.5577&q=University%20of%20Nottingham%20Ningbo%20China';
-        var androidNativeUrl = 'geo:29.8007,121.5577?q=University+of+Nottingham+Ningbo+China';
-
-        if (isIOS || isAndroid) {
-            e.preventDefault();
-
-            var nativeUrl = isIOS ? iosNativeUrl : androidNativeUrl;
-            window.location.href = nativeUrl;
-
-            // If native app cannot be opened, stay reliable by falling back to web maps.
-            setTimeout(function () {
-                window.location.href = fallbackUrl;
-            }, 900);
-        }
-    });
-})();
