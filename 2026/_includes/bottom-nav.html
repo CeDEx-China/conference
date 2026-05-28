@@ -1,6 +1,7 @@
 <!-- Bottom Navigation Bar — 2026 -->
 <nav class="side-nav" aria-label="Section navigation">
+    <span class="nav-progress" id="nav-progress">1 / {{ site.data.2026.navigation | size }}</span>
     {% for item in site.data.2026.navigation %}
-    <a href="{{ item.url }}" class="nav-dot{% if forloop.first %} active{% endif %}" data-section="{{ forloop.index0 }}">{{ item.label }}</a>
+    <a href="{{ item.url }}" class="nav-dot{% if forloop.first %} active{% endif %}" data-section="{{ forloop.index0 }}" title="{{ item.label }}">{{ item.label }}</a>
     {% endfor %}
 </nav>

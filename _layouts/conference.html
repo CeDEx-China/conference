@@ -15,6 +15,56 @@
     <meta property="og:type" content="website">
     <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
     {% seo %}
+    {% if page.start_date and page.end_date %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "startDate": "{{ page.start_date }}",
+      "endDate": "{{ page.end_date }}",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "University of Nottingham Ningbo China",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "199 Taikang East Road",
+          "addressLocality": "Ningbo",
+          "addressRegion": "Zhejiang",
+          "postalCode": "315100",
+          "addressCountry": "CN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 29.8007,
+          "longitude": 121.5577
+        }
+      },
+      "organizer": [
+        {
+          "@type": "Organization",
+          "name": "Centre for Decision Research and Experimental Economics China (CeDEx China)",
+          "url": "https://www.nottingham.edu.cn/en/humanities-and-social-sciences/schools-and-department/economics/research/research-centres/cedex-china/home.aspx",
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "University of Nottingham Ningbo China"
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "Centre for Health Economics (CHE)",
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "University of Nottingham Ningbo China"
+          }
+        }
+      ]
+    }
+    </script>
+    {% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,6 +74,7 @@
     <link rel="stylesheet" href="{{ page.year | append: '/css/mobile.css' | relative_url }}">
 </head>
 <body>
+    <a class="skip-link" href="#hero">Skip to main content</a>
     {% include topbar.html %}
     {% include mobile-drawer.html %}
     {% include bottom-nav.html %}

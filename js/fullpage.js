@@ -23,6 +23,8 @@
         if (mobileDots[index]) mobileDots[index].classList.add('active');
         currentSection = index;
         sections[index].scrollTop = 0;
+        var progress = document.getElementById('nav-progress');
+        if (progress) { progress.textContent = (index + 1) + ' / ' + sections.length; }
     }
 
     function goToSection(index) {
@@ -175,6 +177,63 @@ document.addEventListener('fpGoTo', function(e) {
         if (e.key === 'Escape') {
             dropdown.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false');
             toggle.focus();
+        }
+    });
+})();
+
+/* Submission deadline guard — covers all submit-paper buttons */
+(function () {
+    'use strict';
+
+    var submitBtns = document.querySelectorAll('[id^="submit-paper-btn"]');
+    if (!submitBtns.length) return;
+
+    submitBtns.forEach(function (submitBtn) {
+        var deadlineStr = submitBtn.getAttribute('data-deadline');
+        var deadline = deadlineStr ? new Date(deadlineStr) : null;
+        if (!deadline || Number.isNaN(deadline.getTime())) return;
+
+        var now = new Date();
+        var isExpired = now.getTime() > deadline.getTime();
+        if (!isExpired) return;
+
+        submitBtn.setAttribute('aria-disabled', 'true');
+        submitBtn.setAttribute('title', 'Submission deadline has passed (May 20, 2026).');
+        submitBtn.classList.add('is-expired');
+
+        submitBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            alert('Submission deadline has passed. Please contact CedexChina@nottingham.edu.cn for inquiries.');
+        });
+    });
+})();
+
+/* Mobile maps deep link with fallback */
+(function () {
+    'use strict';
+
+    var mobileMapLink = document.getElementById('mobile-map-link');
+    if (!mobileMapLink) return;
+
+    mobileMapLink.addEventListener('click', function (e) {
+        var ua = navigator.userAgent || '';
+        var isIOS = /iPhone|iPad|iPod/i.test(ua);
+        var isAndroid = /Android/i.test(ua);
+
+        var fallbackUrl = 'https://maps.google.com/?q=29.8007,121.5577';
+        var iosNativeUrl = 'maps://?ll=29.8007,121.5577&q=University%20of%20Nottingham%20Ningbo%20China';
+        var androidNativeUrl = 'geo:29.8007,121.5577?q=University+of+Nottingham+Ningbo+China';
+
+        if (isIOS || isAndroid) {
+            e.preventDefault();
+
+            var nativeUrl = isIOS ? iosNativeUrl : androidNativeUrl;
+            window.location.href = nativeUrl;
+
+            // If native app cannot be opened, stay reliable by falling back to web maps.
+            setTimeout(function () {
+                window.location.href = fallbackUrl;
+            }, 900);
         }
     });
 })();

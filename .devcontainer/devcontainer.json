@@ -1,21 +1,42 @@
 {
     "name": "Jekyll GitHub Pages",
     "image": "mcr.microsoft.com/devcontainers/jekyll:latest",
-    "forwardPorts": [4000, 35729],
+    "runArgs": [
+        "-p",
+        "4000:4000"
+    ],
+    "forwardPorts": [
+        4000,
+        35729
+    ],
     "portsAttributes": {
         "4000": {
             "label": "Jekyll",
-            "onAutoForward": "notify"
+            "onAutoForward": "notify",
+            "hostAddress": "0.0.0.0" // 关键：绑定所有接口，允许内网访问
         },
         "35729": {
             "label": "LiveReload",
-            "onAutoForward": "ignore"
+            "onAutoForward": "ignore",
+            "hostAddress": "0.0.0.0"
         }
     },
-    "postCreateCommand": "bundle install && bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling",
+    "postStartCommand": "bundle install && bundle exec jekyll serve --host 0.0.0.0 --port 4000 --livereload --force_polling",
     "customizations": {
         "vscode": {
+            "settings": {
+                "editor.inlineSuggest.enabled": true,
+                "github.copilot.enable": {
+                    "*": true,
+                    "plaintext": false,
+                    "markdown": true,
+                    "scminput": false
+                    
+                }
+            },
             "extensions": [
+                "DenizhanDaklr.copilot-vscode-deepseek",
+                "GitHub.copilot-chat",
                 "shopify.ruby-lsp",
                 "sissel.shopify-liquid"
             ]

@@ -28,7 +28,6 @@
 ═══════════════════════════════════════ */
 @media (max-width: 1024px) {
     .speakers-grid--5col { grid-template-columns: repeat(3, 1fr); max-width: 800px; }
-    .dates-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ═══════════════════════════════════════
@@ -36,13 +35,15 @@
 ═══════════════════════════════════════ */
 @media (max-width: 900px) {
     /* Layout */
-    .content-grid          { grid-template-columns: 1fr; }
+    .content-grid          { gap: 1.5rem; }
     .schedule-container    { grid-template-columns: 1fr; }
     .participation-split   { grid-template-columns: 1fr; gap: 2rem; }
     .speakers-grid--3col   { grid-template-columns: repeat(2, 1fr); max-width: 500px; }
+    .topics-grid           { grid-template-columns: 1fr 1fr; }
 
     /* Date cards */
     .date-card { padding: 1.2rem 1rem; }
+    .date-desc { font-size: .82rem; }
 
     /* Schedule: time floats above the event text */
     .schedule-item { flex-wrap: wrap; gap: .1rem; padding: .65rem .75rem; }
@@ -72,6 +73,21 @@
     .registration-card { padding: 1.75rem 1.5rem; }
     .submission-box    { padding: 1.75rem 1.5rem; }
 
+    /* Registration table: collapse to stacked */
+    .reg-table-row {
+        grid-template-columns: 1fr;
+        gap: .65rem;
+        padding: 1.25rem 1.5rem;
+    }
+    .reg-table-cell--action {
+        justify-content: flex-start;
+    }
+    .reg-table-cell--action .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
     /* Participation */
     .participation-header { margin-bottom: 1.5rem; }
 }
@@ -88,6 +104,9 @@
     .container              { padding: var(--section-pad-v) 1rem; }
     .container--participation { padding: 1.25rem 1rem; }
 
+    /* Topics: single column on small screens */
+    .topics-grid { grid-template-columns: 1fr; }
+
     /* Hero */
     .section-content { padding: 1.5rem 1rem; }
     .hero-badge  { font-size: .68rem; letter-spacing: .08em; }
@@ -96,10 +115,25 @@
     .btn         { text-align: center; }
     .scroll-indicator { display: none; } /* reclaim space on small screens */
 
-    /* Dates: 2-column */
-    .dates-grid  { grid-template-columns: 1fr 1fr; }
-    .date-card   { padding: 1rem .875rem; }
-    .date-icon svg { width: 22px; height: 22px; }
+    /* Dates: single column + compact rows */
+    .dates-grid  { grid-template-columns: 1fr; gap: .65rem; }
+    .date-card   {
+        padding: .85rem .9rem;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: .15rem .75rem;
+    }
+    .date-icon {
+        width: 34px; height: 34px; border-radius: 8px;
+        grid-row: 1 / 3; align-self: center;
+    }
+    .date-icon svg { width: 18px; height: 18px; }
+    .date-value { font-size: .95rem; }
+    .date-desc  { font-size: .78rem; }
+    .date-status {
+        grid-column: 1 / -1; grid-row: auto;
+        margin-top: .35rem; justify-self: flex-start;
+    }
 
     /* Speakers: horizontal card with CSS grid (photo | h3 + title stacked) */
     .speakers-grid           { grid-template-columns: 1fr; }
