@@ -39,33 +39,7 @@
 
 - day: "Day 2 — June 25"
   items:
-    - time: "09:00 – 10:00"
-      event: "Keynote: Speaker TBA"
-      type: keynote
-    - time: "10:00 – 10:30"
-      event: "Coffee Break"
-      type: break
-    - time: "10:30 – 12:00"
-      event: "Parallel Sessions C"
+    - time: "TBD"
+      event: "Detailed schedule to be announced"
       type: ""
-    - time: "12:00 – 13:30"
-      event: "Lunch"
-      type: break
-    - time: "13:30 – 15:00"
-      event: "Panel Discussion"
-      type: ""
-    - time: "15:00 – 15:30"
-      event: "Tea Break"
-      type: break
-    - time: "15:30 – 17:00"
-      event: "Keynote: Speaker TBA"
-      type: keynote
-    - time: "17:00 – 17:30"
-      event: "Closing Remarks &amp; Awards"
-      type: ""
-    - time: "17:30 – 19:00"
-      event: "Free Time / Networking"
-      type: ""
-    - time: "19:00 – 22:00"
-      event: "Conference Dinner"
       type: social
