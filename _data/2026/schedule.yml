@@ -85,43 +85,88 @@
         affiliation: "University of Nottingham"
       chair:
         name: "Sarah Cook"
-        affiliation: "Head of School of Economics"
+        affiliation: "Head of School of Economics, UNNC"
     - time: "19:15"
       event: "Dinner"
       type: social
 
 - day: "Day 2 — June 25"
   items:
-    - time: "09:00 – 10:00"
-      event: "Keynote: Speaker TBA"
+    - time: "08:45 – 09:00"
+      label: "Opening and Welcome"
+      type: session
+      presenters:
+        - name: "Professor Alain Chong"
+          affiliation: "VP RKE, UNNC"
+        - name: "Professor Sarah Cook"
+          affiliation: "Head of School of Economics, UNNC"
+    - time: "09:00 – 09:25"
+      label: "Presentation A1"
+      type: session
+      speaker:
+        name: "Professor M. Mahmud Khan"
+        affiliation: "University of Georgia"
+    - time: "09:25 – 09:50"
+      label: "Presentation A2"
+      type: session
+      speaker:
+        name: "Professor Siripen Supakankunti"
+        affiliation: "Chulalongkorn University"
+    - time: "09:50 – 10:15"
+      label: "Presentation A3"
+      type: session
+      speaker:
+        name: "Dr. Changle Li"
+        affiliation: "Fujian Medical University"
+    - time: "10:15 – 10:45"
+      event: "Break & Poster Viewing"
+      type: break
+    - time: "10:45 – 11:10"
+      label: "Presentation A4"
+      type: session
+      speaker:
+        name: "Dr. Chao Ma"
+        affiliation: "Southeast University"
+    - time: "11:10 – 11:35"
+      label: "Presentation A5"
+      type: session
+      speaker:
+        name: "Dr. Xi Chen"
+        affiliation: "Yale University"
+    - time: "11:35 – 12:00"
+      label: "Presentation A6"
+      type: session
+      speaker:
+        name: "Professor Lizheng Shi"
+        affiliation: "Tulane University"
+    - time: "12:00 – 12:15"
+      event: "Morning Session Wrap-Up"
+      type: ""
+    - time: "12:15 – 13:30"
+      event: "Lunch Break"
+      type: break
+    - time: "13:30 – 14:45"
+      label: "Roundtable"
+      type: session
+      presenters:
+        - name: "Dr. Xi Chen"
+          affiliation: "Yale University"
+        - name: "Dr. Huiwen Xu"
+          affiliation: "Emory University"
+        - name: "Professor Liang Wang"
+          affiliation: "Marshall University"
+        - name: "Dr. Wenkai Li"
+          affiliation: "China Medical Board"
+        - name: "Professor Lizheng Shi"
+          affiliation: "Tulane University"
+        - name: "Professor Zhuo Chen"
+          affiliation: "UNNC"
+    - time: "14:45 – 15:15"
+      label: "Closing Keynote"
       type: keynote
-    - time: "10:00 – 10:30"
-      event: "Coffee Break"
-      type: break
-    - time: "10:30 – 12:00"
-      event: "Parallel Sessions C"
+      speaker:
+        name: "Professor Susan Lu"
+        affiliation: "University of Toronto"
+    - time: "15:15 – 15:30"
+      event: "Wrap-Up & Closing"
       type: ""
-<<<<<<< Updated upstream
-    - time: "12:00 – 13:30"
-      event: "Lunch"
-      type: break
-    - time: "13:30 – 15:00"
-      event: "Panel Discussion"
-      type: ""
-    - time: "15:00 – 15:30"
-      event: "Tea Break"
-      type: break
-    - time: "15:30 – 17:00"
-      event: "Keynote: Speaker TBA"
-      type: keynote
-    - time: "17:00 – 17:30"
-      event: "Closing Remarks &amp; Awards"
-      type: ""
-    - time: "17:30 – 19:00"
-      event: "Free Time / Networking"
-      type: ""
-    - time: "19:00 – 22:00"
-      event: "Conference Dinner"
-      type: social
-=======
->>>>>>> Stashed changes
