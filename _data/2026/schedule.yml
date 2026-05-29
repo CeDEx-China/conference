@@ -1,38 +1,91 @@
 - day: "Day 1 — June 24"
   items:
     - time: "09:00 – 09:15"
-      event: "Welcome &amp; Opening"
+      label: "Welcome & Opening"
       type: ""
+      speaker:
+        name: "Professor Catriona Morrison"
+        affiliation: "Dean of FHSS, UNNC"
     - time: "09:15 – 10:00"
-      event: "Plenary 1: Andrea Isoni"
+      label: "Plenary 1"
       type: keynote
+      speaker:
+        name: "Professor Andrea Isoni"
+        affiliation: "Warwick University"
+      chair:
+        name: "Shaun Goldfinch"
+        affiliation: "Associate Dean RKE"
     - time: "10:00 – 10:10"
-      event: "Morning Break"
+     
       type: break
     - time: "10:10 – 11:25"
-      event: "Session 1: Tom Lane, Mengxing Wei, Jaesun Lee"
-      type: ""
+      label: "Session 1"
+      type: session
+      presenters:
+        - name: "Dr Tom Lane"
+          affiliation: "Newcastle University"
+          chair: true
+        - name: "Dr Mengxing Wei"
+          affiliation: "Nankai University"
+        - name: "Dr Jaesun Lee"
+          affiliation: "Hanyang University"
     - time: "11:30 – 12:15"
-      event: "Plenary 2: Jaimie W. Lien"
+      label: "Plenary 2"
       type: keynote
+      speaker:
+        name: "Professor Jaimie W. Lien"
+        affiliation: "Shandong University"
+      chair:
+        name: "Haibo Xu"
+        affiliation: "School of Economics Director of PGR"
     - time: "12:15 – 13:50"
       event: "Lunch Break"
       type: break
     - time: "13:50 – 14:35"
-      event: "Plenary 3: Ming Gao"
+      label: "Plenary 3"
       type: keynote
+      speaker:
+        name: "Professor Ming Gao"
+        affiliation: "Liaoning University"
+      chair:
+        name: "Chen Qu"
+        affiliation: "Research Lead of CeDEx China"
     - time: "14:35 – 15:50"
-      event: "Session 2: Flora Li, Jingliang Liu, Feng Zhu"
-      type: ""
+      label: "Session 2"
+      type: session
+      presenters:
+        - name: "Dr Flora Li"
+          affiliation: "Guangdong Institute of Intelligent Technology"
+          chair: true
+        - name: "Dr Jingliang Liu"
+          affiliation: "Shandong University"
+        - name: "Dr Feng Zhu"
+          affiliation: "Nankai University"
     - time: "15:50 – 16:00"
-      event: "Afternoon Break"
+     
       type: break
     - time: "16:00 – 17:40"
-      event: "Session 3: Jie Zheng, Haihan Yu, Yizhi Wang, Zhixian Yu"
-      type: ""
+      label: "Session 3"
+      type: session
+      presenters:
+        - name: "Professor Jie Zheng"
+          affiliation: "Shandong University"
+          chair: true
+        - name: "Dr Haihan Yu"
+          affiliation: "Zhejiang University of Finance and Economics"
+        - name: "Dr Yizhi Wang"
+          affiliation: "Tianjin University"
+        - name: "Dr Zhixian Yu"
+          affiliation: "University of Nottingham Ningbo China"
     - time: "18:00 – 18:45"
-      event: "Plenary 4: Abigail Barr"
+      label: "Plenary 4"
       type: keynote
+      speaker:
+        name: "Professor Abigail Barr"
+        affiliation: "University of Nottingham"
+      chair:
+        name: "Sarah Cook"
+        affiliation: "Head of School of Economics"
     - time: "19:15"
       event: "Dinner"
       type: social
@@ -48,6 +101,7 @@
     - time: "10:30 – 12:00"
       event: "Parallel Sessions C"
       type: ""
+<<<<<<< Updated upstream
     - time: "12:00 – 13:30"
       event: "Lunch"
       type: break
@@ -69,3 +123,5 @@
     - time: "19:00 – 22:00"
       event: "Conference Dinner"
       type: social
+=======
+>>>>>>> Stashed changes

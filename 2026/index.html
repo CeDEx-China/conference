@@ -35,7 +35,7 @@ end_date: "2026-06-25"
         <h2>About the Conference</h2>
         <div class="content-grid">
             <div class="about-intro">
-                <p>The 5th CeDEx China &amp; 4th CHE Conference brings together scholars, policymakers, and healthcare leaders to explore decision-making behaviour, health system optimization, and economic approaches to public health challenges.</p>
+                <p>The 5th CeDEx China &amp; 4th CHE Conference brings together scholars, policymakers, and healthcare leaders to explore decision-making mechanisms, games and economic behaviour, experimental economics, health system optimization, and economic approaches to public health challenges.</p>
                 <p><strong>Organised by</strong> Centre for Decision Research and Experimental Economics China (CeDEx China) and the Centre for Health Economics (CHE), University of Nottingham Ningbo China.</p>
             </div>
             <div class="highlights-box">
@@ -43,6 +43,7 @@ end_date: "2026-06-25"
                 <ul class="topics-grid">
                     <li>Experimental Economics &amp; Game Theory</li>
                     <li>Behavioural Economics</li>
+                    <li>Microeconomic Theory</li>
                     <li>Healthcare Policy Innovation</li>
                     <li>Global Health Systems</li>
                     <li>Behavioral Interventions</li>
@@ -146,17 +147,60 @@ end_date: "2026-06-25"
 <section id="schedule" class="fullpage-section" data-section="5">
     <div class="container">
         <h2>Conference Schedule</h2>
+        <p class="section-lead">June 24–25, 2026 &middot; University of Nottingham Ningbo China</p>
+
         <div class="schedule-container">
             {% assign schedule = site.data["2026"].schedule %}
             {% for day in schedule %}
             <div class="schedule-day">
-                <h3>{{ day.day }}</h3>
+                <h3 class="schedule-day-heading">{{ day.day }}</h3>
+                {% assign first_item = day.items | first %}
+                {% if first_item.time == "TBD" %}
+                <div class="schedule-tbd">
+                    <div class="schedule-tbd-icon" aria-hidden="true">
+                        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                    </div>
+                    <p class="schedule-tbd-title">Schedule Coming Soon</p>
+                    <p class="schedule-tbd-desc">{{ first_item.event }}</p>
+                </div>
+                {% else %}
                 {% for item in day.items %}
-                <div class="schedule-item{% if item.type == 'keynote' %} schedule-item--keynote{% elsif item.type == 'break' %} schedule-item--break{% elsif item.type == 'social' %} schedule-item--social{% endif %}">
-                    <span class="time">{{ item.time }}</span>
-                    <span class="event">{{ item.event }}</span>
+                <div class="schedule-item{% if item.type == 'keynote' %} schedule-item--keynote{% elsif item.type == 'session' %} schedule-item--session{% elsif item.type == 'break' %} schedule-item--break{% elsif item.type == 'social' %} schedule-item--social{% endif %}">
+                    <div class="schedule-time">
+                        <span class="time">{{ item.time }}</span>
+                        {% if item.label %}<span class="schedule-label">{{ item.label }}</span>{% endif %}
+                        {% if item.type == 'social' %}<span class="schedule-badge schedule-badge--social">Social</span>{% endif %}
+                        {% if item.type == 'break' %}<span class="schedule-badge schedule-badge--break">Break</span>{% endif %}
+                    </div>
+                    <div class="schedule-content">
+                        {% if item.speaker %}
+                        <div class="schedule-speaker">
+                            <span class="speaker-name">{{ item.speaker.name }}</span>
+                            {% if item.speaker.affiliation %}<span class="speaker-aff">{{ item.speaker.affiliation }}</span>{% endif %}
+                        </div>
+                        {% if item.chair %}
+                        <div class="schedule-chair">
+                            <span class="chair-name">Chair: {{ item.chair.name }}</span>
+                            {% if item.chair.affiliation %}<span class="chair-aff">{{ item.chair.affiliation }}</span>{% endif %}
+                        </div>
+                        {% endif %}
+                        {% elsif item.type == 'session' %}
+                        <ul class="session-presenters">
+                            {% for p in item.presenters %}
+                            <li class="session-presenter{% if p.chair %} session-presenter--chair{% endif %}">
+                                <span class="speaker-name">{{ p.name }}{% if p.chair %}&thinsp;<span class="presenter-chair-mark">(Chair)</span>{% endif %}</span>
+                                {% if p.affiliation %}<span class="speaker-aff">{{ p.affiliation }}</span>{% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <span class="event">{{ item.event }}</span>
+                        {% if item.details %}<span class="details">{{ item.details }}</span>{% endif %}
+                        {% endif %}
+                    </div>
                 </div>
                 {% endfor %}
+                {% endif %}
             </div>
             {% endfor %}
         </div>
