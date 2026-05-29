@@ -160,7 +160,7 @@
         - name: "Professor Lizheng Shi"
           affiliation: "Tulane University"
         - name: "Professor Zhuo Chen"
-          affiliation: "UNNC"
+          affiliation: "CHE"
     - time: "14:45 – 15:15"
       label: "Closing Keynote"
       type: keynote
