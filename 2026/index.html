@@ -180,8 +180,8 @@ end_date: "2026-06-25"
                             {% if s.affiliation %}<span class="speaker-aff">{{ s.affiliation }}</span>{% endif %}
                         </div>
                         {% endfor %}
-                        {% if item.chair %}
-                        {% elsif item.speaker %}
+                        {% endif %}
+                        {% if item.speaker %}
                         <div class="schedule-speaker">
                             <span class="speaker-name">{{ item.speaker.name }}</span>
                             {% if item.speaker.affiliation %}<span class="speaker-aff">{{ item.speaker.affiliation }}</span>{% endif %}

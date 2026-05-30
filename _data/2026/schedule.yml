@@ -5,7 +5,7 @@
       type: ""
       speakers:
         - name: "Professor Catriona Morrison"
-          affiliation: "Dean of FHSS, UNNC"
+          affiliation: "Dean of FHSS"
         - name: "Professor Shravan Luckraz"
           affiliation: "Director of CeDEx China"
     - time: "09:15 – 10:00"
@@ -87,7 +87,7 @@
         affiliation: "University of Nottingham"
       chair:
         name: "Professor Sarah Cook"
-        affiliation: "Head of School of Economics, UNNC"
+        affiliation: "Head of School of Economics"
     - time: "19:15"
       event: "Dinner"
       type: social
@@ -99,9 +99,9 @@
       type: session
       presenters:
         - name: "Professor Alain Chong"
-          affiliation: "VP RKE, UNNC"
+          affiliation: "VP RKE"
         - name: "Professor Sarah Cook"
-          affiliation: "Head of School of Economics, UNNC"
+          affiliation: "Head of School of Economics"
     - time: "09:00 – 09:25"
       label: "Presentation A1"
       type: session
