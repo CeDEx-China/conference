@@ -3,9 +3,11 @@
     - time: "09:00 – 09:15"
       label: "Welcome & Opening"
       type: ""
-      speaker:
-        name: "Professor Catriona Morrison"
-        affiliation: "Dean of FHSS, UNNC"
+      speakers:
+        - name: "Professor Catriona Morrison"
+          affiliation: "Dean of FHSS, UNNC"
+        - name: "Professor Shravan Luckraz"
+          affiliation: "Director of CeDEx China"
     - time: "09:15 – 10:00"
       label: "Plenary 1"
       type: keynote
@@ -13,7 +15,7 @@
         name: "Professor Andrea Isoni"
         affiliation: "Warwick University"
       chair:
-        name: "Shaun Goldfinch"
+        name: "Professor Shaun Goldfinch"
         affiliation: "Associate Dean RKE"
     - time: "10:00 – 10:10"
      
@@ -36,10 +38,10 @@
         name: "Professor Jaimie W. Lien"
         affiliation: "Shandong University"
       chair:
-        name: "Haibo Xu"
+        name: "Dr Haibo Xu"
         affiliation: "School of Economics Director of PGR"
     - time: "12:15 – 13:50"
-      event: "Lunch Break"
+      event: "Lunch Break & Group Photo"
       type: break
     - time: "13:50 – 14:35"
       label: "Plenary 3"
@@ -48,7 +50,7 @@
         name: "Professor Ming Gao"
         affiliation: "Liaoning University"
       chair:
-        name: "Chen Qu"
+        name: "Dr Chen Qu"
         affiliation: "Research Lead of CeDEx China"
     - time: "14:35 – 15:50"
       label: "Session 2"
@@ -84,7 +86,7 @@
         name: "Professor Abigail Barr"
         affiliation: "University of Nottingham"
       chair:
-        name: "Sarah Cook"
+        name: "Professor Sarah Cook"
         affiliation: "Head of School of Economics, UNNC"
     - time: "19:15"
       event: "Dinner"
