@@ -79,7 +79,7 @@
           affiliation: "Tianjin University"
         - name: "Dr Zhixian Yu"
           affiliation: "University of Nottingham Ningbo China"
-    - time: "18:00 – 18:45"
+    - time: "17:45 – 18:30"
       label: "Plenary 4"
       type: keynote
       speaker:
@@ -88,7 +88,7 @@
       chair:
         name: "Professor Sarah Cook"
         affiliation: "Head of School of Economics"
-    - time: "19:15"
+    - time: "18:45"
       event: "Dinner"
       type: social
 
