@@ -98,8 +98,7 @@
       label: "Opening and Welcome"
       type: session
       presenters:
-        - name: "Professor Alain Chong"
-          affiliation: "VP RKE"
+        
         - name: "Professor Sarah Cook"
           affiliation: "Head of School of Economics"
     - time: "09:00 – 09:25"
