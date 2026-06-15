@@ -4,8 +4,7 @@
       label: "Welcome & Opening"
       type: ""
       speakers:
-        - name: "Professor Catriona Morrison"
-          affiliation: "Dean of FHSS"
+        
         - name: "Professor Shravan Luckraz"
           affiliation: "Director of CeDEx China"
     - time: "09:15 – 10:00"
