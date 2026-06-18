@@ -1,172 +1,214 @@
-- day: "Day 1 — June 24"
+# ═══════════════════════════════════════════════════════════════════════════════
+#  Schedule verified against print-handbook.html (v1.3, 2026-06-17).
+#  All names, affiliations, times, and chairs match the reviewed print version.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+- day: "Day 1 — June 24 (Wed)"
   items:
-    - time: "09:00 – 09:15"
-      label: "Welcome & Opening"
-      type: ""
-      speakers:
-        
-        - name: "Professor Shravan Luckraz"
-          affiliation: "Director of CeDEx China"
-    - time: "09:15 – 10:00"
-      label: "Plenary 1"
+    - time: "08:45–09:00"
+      event: "Check-in"
+      type: break
+
+    - time: "09:00–09:15"
+      event: "Welcome & Opening"
+      details: "Prof. Shravan Luckraz (Director, CeDEx China)"
+
+    - time: "09:15–10:00"
+      label: "Plenary I"
       type: keynote
       speaker:
-        name: "Professor Andrea Isoni"
+        name: "Prof. Andrea Isoni"
         affiliation: "Warwick University"
       chair:
-        name: "Professor Shaun Goldfinch"
+        name: "Prof. Shaun Goldfinch"
         affiliation: "Associate Dean RKE"
-    - time: "10:00 – 10:10"
-     
+
+    - time: "10:00–10:10"
+      event: "Coffee & Networking"
       type: break
-    - time: "10:10 – 11:25"
+
+    - time: "10:10–11:25"
       label: "Session 1"
       type: session
       presenters:
-        - name: "Dr Tom Lane"
+        - name: "Dr. Tom Lane"
           affiliation: "Newcastle University"
           chair: true
-        - name: "Dr Mengxing Wei"
+        - name: "Dr. Mengxing Wei"
           affiliation: "Nankai University"
-        - name: "Dr Jaesun Lee"
+        - name: "Dr. Jaesun Lee"
           affiliation: "Hanyang University"
-    - time: "11:30 – 12:15"
-      label: "Plenary 2"
+
+    - time: "11:30–12:15"
+      label: "Plenary II"
       type: keynote
       speaker:
-        name: "Professor Jaimie W. Lien"
+        name: "Prof. Jaimie W. Lien"
         affiliation: "Shandong University"
       chair:
-        name: "Dr Haibo Xu"
-        affiliation: "School of Economics Director of PGR"
-    - time: "12:15 – 13:50"
-      event: "Lunch Break & Group Photo"
+        name: "Dr. Haibo Xu"
+        affiliation: "Director of PGR"
+
+    - time: "12:15–13:50"
+      event: "Lunch at Staff Canteen & Group Photo"
       type: break
-    - time: "13:50 – 14:35"
-      label: "Plenary 3"
+
+    - time: "13:50–14:35"
+      label: "Plenary III"
       type: keynote
       speaker:
-        name: "Professor Ming Gao"
+        name: "Prof. Ming Gao"
         affiliation: "Liaoning University"
       chair:
-        name: "Dr Chen Qu"
-        affiliation: "Research Lead of CeDEx China"
-    - time: "14:35 – 15:50"
+        name: "Dr. Chen Qu"
+        affiliation: "Research Lead, CeDEx China"
+
+    - time: "14:35–15:50"
       label: "Session 2"
       type: session
       presenters:
-        - name: "Dr Flora Li"
+        - name: "Dr. Flora Li"
           affiliation: "Guangdong Institute of Intelligent Technology"
           chair: true
-        - name: "Dr Jingliang Liu"
+        - name: "Dr. Jingliang Liu"
           affiliation: "Shandong University"
-        - name: "Dr Feng Zhu"
+        - name: "Dr. Feng Zhu"
           affiliation: "Nankai University"
-    - time: "15:50 – 16:00"
-     
+
+    - time: "15:50–16:00"
+      event: "Coffee & Networking"
       type: break
-    - time: "16:00 – 17:40"
+
+    - time: "16:00–17:40"
       label: "Session 3"
       type: session
       presenters:
-        - name: "Professor Jie Zheng"
+        - name: "Prof. Jie Zheng"
           affiliation: "Shandong University"
           chair: true
-        - name: "Dr Haihan Yu"
-          affiliation: "Zhejiang University of Finance and Economics"
-        - name: "Dr Yizhi Wang"
+        - name: "Dr. Haihan Yu"
+          affiliation: "Zhejiang University of Finance & Economics"
+        - name: "Dr. Yizhi Wang"
           affiliation: "Tianjin University"
-        - name: "Dr Zhixian Yu"
-          affiliation: "University of Nottingham Ningbo China"
-    - time: "17:45 – 18:30"
-      label: "Plenary 4"
+        - name: "Dr. Zhixian Yu"
+          affiliation: "UNNC"
+
+    - time: "17:45–18:30"
+      label: "Plenary IV"
       type: keynote
       speaker:
-        name: "Professor Abigail Barr"
+        name: "Prof. Abigail Barr"
         affiliation: "University of Nottingham"
       chair:
-        name: "Professor Sarah Cook"
-        affiliation: "Head of School of Economics"
+        name: "Dr. Tom Lane"
+        affiliation: "Newcastle University"
+
     - time: "18:45"
-      event: "Dinner"
+      event: "Social Dinner — Staff Canteen"
       type: social
 
-- day: "Day 2 — June 25"
+- day: "Day 2 — June 25 (Thu)"
   items:
-    - time: "08:45 – 09:00"
-      label: "Opening and Welcome"
-      type: session
-      presenters:
-        
-        - name: "Professor Sarah Cook"
-          affiliation: "Head of School of Economics"
-    - time: "09:00 – 09:25"
-      label: "Presentation A1"
-      type: session
+    - time: "08:30–08:45"
+      event: "Check-in"
+      type: break
+
+    - time: "08:45–09:00"
+      event: "Opening & Welcome"
+      details: "Prof. Sarah Cook (Head, School of Economics, UNNC) · Chair: Prof. Zhuo Chen"
+
+    # Session 1: Healthcare Services Utilization & Seeking — Chair: Dr. Yang Li
+    - time: "09:00–09:30"
+      label: "Session 1: Healthcare Services Utilization & Seeking"
+      type: keynote
       speaker:
-        name: "Professor M. Mahmud Khan"
+        name: "Prof. M. Mahmud Khan"
         affiliation: "University of Georgia"
-    - time: "09:25 – 09:50"
-      label: "Presentation A2"
-      type: session
-      speaker:
-        name: "Professor Siripen Supakankunti"
-        affiliation: "Chulalongkorn University"
-    - time: "09:50 – 10:15"
-      label: "Presentation A3"
-      type: session
+      chair:
+        name: "Dr. Yang Li"
+        affiliation: "UNNC"
+
+    - time: "09:30–10:00"
+      type: keynote
       speaker:
         name: "Dr. Changle Li"
         affiliation: "Fujian Medical University"
-    - time: "10:15 – 10:45"
-      event: "Break & Poster Viewing"
+
+    - time: "10:00–10:30"
+      event: "Coffee Break & Poster Viewing"
       type: break
-    - time: "10:45 – 11:10"
-      label: "Presentation A4"
-      type: session
-      speaker:
-        name: "Dr. Chao Ma"
-        affiliation: "Southeast University"
-    - time: "11:10 – 11:35"
-      label: "Presentation A5"
-      type: session
-      speaker:
-        name: "Dr. Xi Chen"
-        affiliation: "Yale University"
-    - time: "11:35 – 12:00"
-      label: "Presentation A6"
-      type: session
-      speaker:
-        name: "Professor Lizheng Shi"
-        affiliation: "Tulane University"
-    - time: "12:00 – 12:15"
-      event: "Morning Session Wrap-Up"
-      type: ""
-    - time: "12:15 – 13:30"
-      event: "Lunch Break"
-      type: break
-    - time: "13:30 – 14:45"
-      label: "Roundtable"
+
+    # Roundtable: International Exchanges in Health Economics and Policy Research — Moderator: Dr. Wei Jiang
+    - time: "10:30–11:45"
+      label: "Roundtable: International Exchanges in Health Economics and Policy Research"
       type: session
       presenters:
+        - name: "Dr. Wei Jiang"
+          affiliation: "UNNC"
+          chair: true
         - name: "Dr. Xi Chen"
           affiliation: "Yale University"
         - name: "Dr. Huiwen Xu"
-          affiliation: "Emory University"
-        - name: "Professor Liang Wang"
-          affiliation: "Marshall University"
+          affiliation: "Emory University · President CHPAMS"
+        - name: "Prof. Liang Wang"
+          affiliation: "Marshall University · Past President CHPAMS"
         - name: "Dr. Wenkai Li"
-          affiliation: "China Medical Board"
-        - name: "Professor Lizheng Shi"
+          affiliation: "China Medical Board (CMB)"
+        - name: "Prof. Lizheng Shi"
           affiliation: "Tulane University"
-        - name: "Professor Zhuo Chen"
-          affiliation: "CHE"
-    - time: "14:45 – 15:15"
-      label: "Closing Keynote"
+        - name: "Prof. Zhuo (Adam) Chen"
+          affiliation: "CHE / UNNC & University of Georgia"
+
+    - time: "11:45–13:30"
+      event: "Lunch at Staff Canteen & Poster Viewing"
+      type: break
+
+    # Session 2: Financial & Behavioral Aspects of Health — Chair: Dr. Xuyan Lou
+    - time: "13:30–14:00"
+      label: "Session 2: Financial & Behavioral Aspects of Health"
       type: keynote
       speaker:
-        name: "Professor Susan Lu"
+        name: "Dr. Xi Chen"
+        affiliation: "Yale University"
+      chair:
+        name: "Dr. Xuyan Lou"
+        affiliation: "UNNC"
+
+    - time: "14:00–14:30"
+      type: keynote
+      speaker:
+        name: "Prof. Siripen Supakankunti"
+        affiliation: "Chulalongkorn University"
+
+    - time: "14:30–14:45"
+      event: "Coffee Break"
+      type: break
+
+    # Session 3: AI and Health — Chair: Prof. Zhao Cai
+    - time: "14:45–15:15"
+      label: "Session 3: AI and Health"
+      type: keynote
+      speaker:
+        name: "Prof. Susan Lu"
         affiliation: "University of Toronto"
-    - time: "15:15 – 15:30"
-      event: "Wrap-Up & Closing"
-      type: ""
+      chair:
+        name: "Prof. Zhao Cai"
+        affiliation: "UNNC"
+
+    - time: "15:15–15:45"
+      type: keynote
+      speaker:
+        name: "Prof. Lizheng Shi"
+        affiliation: "Tulane University"
+
+    - time: "15:45–16:00"
+      event: "Closing Remarks"
+      details: "Prof. Sarah Cook (Head, School of Economics, UNNC)"
+
+    - time: "16:00–17:00"
+      event: "Campus Tour"
+      type: break
+
+    - time: "18:00–19:30"
+      event: "Dinner (Invitation only) — Staff Canteen"
+      type: social
