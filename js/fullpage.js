@@ -181,15 +181,15 @@ document.addEventListener('fpGoTo', function(e) {
     });
 })();
 
-/* Submission deadline guard — covers all submit-paper buttons */
+/* Deadline guard — covers submit-paper & register buttons with data-deadline */
 (function () {
     'use strict';
 
-    var submitBtns = document.querySelectorAll('[id^="submit-paper-btn"]');
-    if (!submitBtns.length) return;
+    var deadlineBtns = document.querySelectorAll('[data-deadline]');
+    if (!deadlineBtns.length) return;
 
-    submitBtns.forEach(function (submitBtn) {
-        var deadlineStr = submitBtn.getAttribute('data-deadline');
+    deadlineBtns.forEach(function (btn) {
+        var deadlineStr = btn.getAttribute('data-deadline');
         var deadline = deadlineStr ? new Date(deadlineStr) : null;
         if (!deadline || Number.isNaN(deadline.getTime())) return;
 
@@ -197,13 +197,19 @@ document.addEventListener('fpGoTo', function(e) {
         var isExpired = now.getTime() > deadline.getTime();
         if (!isExpired) return;
 
-        submitBtn.setAttribute('aria-disabled', 'true');
-        submitBtn.setAttribute('title', 'Submission deadline has passed (May 20, 2026).');
-        submitBtn.classList.add('is-expired');
+        btn.setAttribute('aria-disabled', 'true');
+        btn.classList.add('is-expired');
 
-        submitBtn.addEventListener('click', function (e) {
+        btn.addEventListener('click', function (e) {
             e.preventDefault();
-            alert('Submission deadline has passed. Please contact CedexChina@nottingham.edu.cn for inquiries.');
+            var label = btn.textContent.trim();
+            var msg = 'This deadline has passed.';
+            if (btn.id && btn.id.indexOf('submit') !== -1) {
+                msg = 'Submission deadline has passed. Please contact CedexChina@nottingham.edu.cn for inquiries.';
+            } else if (btn.id && btn.id.indexOf('register') !== -1) {
+                msg = 'Early registration deadline (June 10) has passed. Please contact CedexChina@nottingham.edu.cn for on-site registration inquiries.';
+            }
+            alert(msg);
         });
     });
 })();

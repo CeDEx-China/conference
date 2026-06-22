@@ -27,7 +27,7 @@
    LARGE TABLET (≤1024px)
 ═══════════════════════════════════════ */
 @media (max-width: 1024px) {
-    .speakers-grid--5col { grid-template-columns: repeat(3, 1fr); max-width: 800px; }
+    .speakers-grid--5col { grid-template-columns: repeat(3, 220px); }
 }
 
 /* ═══════════════════════════════════════
@@ -38,7 +38,7 @@
     .content-grid          { gap: 1.5rem; }
     .schedule-container    { grid-template-columns: 1fr; }
     .participation-split   { grid-template-columns: 1fr; gap: 2rem; }
-    .speakers-grid--3col   { grid-template-columns: repeat(2, 1fr); max-width: 500px; }
+    .speaker-card { width: auto; }
     .topics-grid           { grid-template-columns: 1fr 1fr; }
 
     /* Date cards */
@@ -67,7 +67,9 @@
    MOBILE (≤600px)
 ═══════════════════════════════════════ */
 @media (max-width: 600px) {
-    .speakers-grid--5col { grid-template-columns: repeat(2, 1fr); }
+    .speaker-card { width: auto; max-width: 100%; }
+    .speakers-grid--3col,
+    .speakers-grid--5col { grid-template-columns: 1fr; }
 
     /* Cards: tighten padding */
     .registration-card { padding: 1.75rem 1.5rem; }
@@ -123,7 +125,7 @@
         margin-top: .35rem; justify-self: flex-start;
     }
 
-    /* Speakers: horizontal card with CSS grid (photo | h3 + title stacked) */
+    /* Speakers: horizontal card (photo | h3 + title) */
     .speakers-grid           { grid-template-columns: 1fr; }
     .speakers-grid--3col,
     .speakers-grid--5col     { max-width: 100%; grid-template-columns: 1fr; }
@@ -180,6 +182,5 @@
 }
 @media (max-width: 480px) {
     .venue-card { padding: 1.25rem 1rem; }
-    .contact-action { padding: .65rem .875rem; }
     .transport-item { font-size: .87rem; }
 }

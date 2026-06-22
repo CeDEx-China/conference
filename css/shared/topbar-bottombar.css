@@ -20,7 +20,7 @@
     --topbar-h: 56px;
     --bottomnav-h: 52px;
     --section-pad-v: 2rem;
-    --container-max: 1200px;
+    --container-max: 1400px;
     --trans-fast: 200ms ease;
     --trans-mid:  350ms cubic-bezier(.4,0,.2,1);
 }
@@ -35,7 +35,7 @@ body {
     background: var(--color-navy);
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.6;
 }
 
